@@ -1,7 +1,8 @@
 import Hero from "./Components/Hero/Hero";
 import Nav from "./Components/Nav/Nav";
+import Projects from "./Components/Projects/Projects";
 import About from "./Components/Skills/About";
-import Skills from "./Components/Skills/Parallax";
+import Parallax from "./Components/Skills/Parallax";
 
 function App() {
   return (
@@ -14,16 +15,15 @@ function App() {
       </section>
 
       <section id="Skills/Technologies" className="h-screen snap-center">
-        <Skills />
+        <Parallax text={"Skills"} />
       </section>
-      <section id="Skills/Technologies" className="h-screen snap-center">
+      <section className="h-screen snap-center">
         <About />
       </section>
       <section id="Projects" className="h-screen snap-center">
-        Project1
+        <Parallax text={"Projects"} />
       </section>
-      <section className="h-screen snap-center">Project1</section>
-      <section className="h-screen snap-center">Project1</section>
+      <Projects />
       <section id="Contact" className="h-screen snap-center">
         Contact
       </section>

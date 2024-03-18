@@ -1,37 +1,83 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 const About = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const textVariants = {
+    initial: { opacity: 0 },
+
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.75,
+      },
+    },
+  };
   return (
-    <div className="flex flex-col w-full h-full p-16 px-4">
-      <div className="flex flex-col w-full items-center justify-center">
-        <h2 className="font-bold text-xl mb-3 text-center">About</h2>
-        <p className="text-left text-sm leading-relaxed">
-          As a junior front-end developer with over a years experience in React,
-          I blend technical skills and creativity to engineer responsive,
-          high-performance websites. My arsenal includes a variety of libraries
-          and technologies, ensuring smooth and engaging user experiences. With
-          a focus on clean design and efficient functionality, I strive to push
-          the boundaries of what's possible on the web. Here to make the digital
-          world a better place, one line of code at a time.
-        </p>
-      </div>
-      <div className="flex flex-col w-full">
-        <h2 className="font-bold text-xl mb-4 text-center mt-3">
-          Technologies
-        </h2>
-        <div className="flex w-full justify-between">
-          <ul className=" list-disc list-inside">
-            <li>HTML/CSS</li>
-            <li>Typescript</li>
-            <li>React</li>
-            <li>Tailwind</li>
-          </ul>
-          <ul className=" list-disc list-inside">
-            <li>Styled Components</li>
-            <li>SASS</li>
-            <li>Version Control</li>
-            <li>Figma/Canva</li>
-          </ul>
-        </div>
-      </div>
+    <div
+      ref={ref}
+      className="relative flex flex-col w-full h-full justify-center p-10 pt-12 x-sm:pt-20 px-4 xx-sm:px-10 x-sm:px-12 lg:px-12"
+    >
+      <motion.div
+        variants={textVariants}
+        initial={"initial"}
+        animate={isInView ? "animate" : "initial"}
+        className="relative flex flex-col w-full h-full items-center justify-between sm:gap-y-8"
+      >
+        <motion.div
+          className="flex flex-col items-center justify-center gap-y-2 x-sm:w-full x-sm:items-start lg:px-12 "
+          variants={textVariants}
+        >
+          <h2 className="font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+            About
+          </h2>
+          <p className=" text-justify text-base leading-7 x-sm:leading-8 sm:leading-7 lg:leading-8  xl:leading-9 lg:text-xl xl:text-2xl 2xl:text-3xl ">
+            As a junior front-end developer with over a years experience in
+            React, I blend technical skills and creativity to engineer
+            responsive, high-performance websites. I'm a huge health and fitness
+            enthusiast so in my spare time I love to try different sports or
+            learn to cook new recipes. I am someone who enjoys an ever changing
+            landscape and from a young age have sought to facilitate the
+            aquisition of new skills and hobbies, I believe that no task is too
+            difficult to overcome with enough dedicated practice and passion.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={textVariants}
+          className="hidden sm:flex sm:flex-col sm:w-full"
+        >
+          <h3 className="font-bold text-xl mb-4 text-center md:mb-6 lg:text-2xl xl:text-3xl">
+            Key Technologies
+          </h3>
+          <div className="flex w-full justify-around md:justify-center gap-x-28">
+            <ul className=" list-disc list-inside lg:text-xl xl:text-2xl">
+              <li>HTML/CSS</li>
+              <li>Typescript</li>
+              <li>React</li>
+              <li>Tailwind</li>
+            </ul>
+            <ul className=" list-disc list-inside lg:text-xl xl:text-2xl">
+              <li>Styled Components</li>
+              <li>LESS/SASS</li>
+              <li>Git/Github</li>
+              <li>Figma/Canva</li>
+            </ul>
+          </div>
+        </motion.div>
+        <motion.a
+          variants={textVariants}
+          className="w-1/2 md:w-1/3 lg:w-1/4"
+          href="David Jennings CV.pdf"
+          download={"David Jennings CV"}
+        >
+          <button className="bg-transparent border-2 w-full rounded-md py-2 2xl:py-2 text-sm  font-semibold md:text-lg lg:text-xl 2xl:text-2xl hover:opacity-50">
+            Download CV
+          </button>
+        </motion.a>
+      </motion.div>
     </div>
   );
 };

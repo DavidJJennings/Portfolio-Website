@@ -1,7 +1,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-const Skills = () => {
+type Props = {
+  text: string;
+};
+
+const Parallax: React.FC<Props> = ({ text }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -17,9 +21,13 @@ const Skills = () => {
         style={{ y: textPosition }}
         className="h-1/3 flex items-center justify-center text-center text-3xl font-bold pt-20 lg:text-4xl xl:text-5xl"
       >
-        <h2>
-          Skills & <br /> Technologies
-        </h2>
+        {text === "Skills" ? (
+          <h2>
+            Skills &amp; <br /> Technology{" "}
+          </h2>
+        ) : (
+          <h2>My Projects</h2>
+        )}
       </motion.div>
       <motion.div className="absolute w-full h-full bg-contain bg-center bg-repeat-x bg-Tree-Bg-Mobile md:bg-Tree-Bg-Tablet bottom-0 z-30"></motion.div>
       <motion.div
@@ -35,4 +43,4 @@ const Skills = () => {
     </div>
   );
 };
-export default Skills;
+export default Parallax;

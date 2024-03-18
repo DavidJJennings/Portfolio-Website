@@ -32,7 +32,7 @@ const Menu = () => {
         },
       },
       closed: {
-        clipPath: `circle(${circleRadius} at 50px 50px)`, // Ensuring correct syntax here
+        clipPath: `circle(${circleRadius} at 40px 50px)`, // Ensuring correct syntax here
         transition: {
           type: "spring",
           stiffness: 400,

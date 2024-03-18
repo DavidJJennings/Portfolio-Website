@@ -10,7 +10,7 @@ const ToggleBtn: React.FC<Props> = (props) => {
   return (
     <button
       onClick={() => setOpen((prev) => !prev)}
-      className=" left-[50px] top-[50px] w-[30px] sm:w-[35px] md:w-[40px] lg:w-[50px] xl:w-[55px] 2xl:w-[65px] aspect-square rounded-full fixed -translate-x-[50%] -translate-y-[50%] flex items-center justify-center z-50"
+      className=" left-[40px] top-[50px] w-[30px] sm:w-[35px] md:w-[40px] lg:w-[50px] xl:w-[55px] 2xl:w-[65px] aspect-square rounded-full fixed -translate-x-[50%] -translate-y-[50%] flex items-center justify-center z-50"
     >
       <svg
         height="100%"
