@@ -18,22 +18,22 @@ const About = () => {
   return (
     <div
       ref={ref}
-      className="relative flex flex-col w-full h-full justify-center p-10 pt-12 x-sm:pt-20 px-4 xx-sm:px-10 x-sm:px-12 lg:px-12"
+      className="relative flex flex-col w-full h-full justify-center p-10 xx-sm:pt-20 px-12 xx-sm:px-10 x-sm:px-12 lg:px-12"
     >
       <motion.div
         variants={textVariants}
         initial={"initial"}
         animate={isInView ? "animate" : "initial"}
-        className="relative flex flex-col w-full h-full items-center justify-between sm:gap-y-8"
+        className="relative flex flex-col w-full h-full items-center justify-start xx-sm:justify-between sm:gap-y-8"
       >
         <motion.div
-          className="flex flex-col items-center justify-center gap-y-2 x-sm:w-full x-sm:items-start lg:px-12 "
+          className="flex flex-col items-center justify-center gap-y-2 x-sm:w-full xx-sm:items-start lg:px-12 "
           variants={textVariants}
         >
           <h2 className="font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl">
             About
           </h2>
-          <p className=" text-justify text-base leading-7 x-sm:leading-8 sm:leading-7 lg:leading-8  xl:leading-9 lg:text-xl xl:text-2xl 2xl:text-3xl ">
+          <p className=" text-justify text-sm leading-loose x-sm:leading-8 sm:leading-7 lg:leading-8  xl:leading-9 lg:text-xl xl:text-2xl 2xl:text-3xl ">
             As a junior front-end developer with over a years experience in
             React, I blend technical skills and creativity to engineer
             responsive, high-performance websites. I'm a huge health and fitness
@@ -52,7 +52,7 @@ const About = () => {
           <h3 className="font-bold text-xl mb-4 text-center md:mb-6 lg:text-2xl xl:text-3xl">
             Key Technologies
           </h3>
-          <div className="flex w-full justify-around md:justify-center gap-x-28">
+          <div className="flex w-full justify-around md:justify-center gap-x-20">
             <ul className=" list-disc list-inside lg:text-xl xl:text-2xl">
               <li>HTML/CSS</li>
               <li>Typescript</li>
@@ -69,11 +69,11 @@ const About = () => {
         </motion.div>
         <motion.a
           variants={textVariants}
-          className="w-1/2 md:w-1/3 lg:w-1/4"
+          className="w-1/2 sm:w-1/3 lg:w-1/4"
           href="David Jennings CV.pdf"
           download={"David Jennings CV"}
         >
-          <button className="bg-transparent border-2 w-full rounded-md py-2 2xl:py-2 text-sm  font-semibold md:text-lg lg:text-xl 2xl:text-2xl hover:opacity-50">
+          <button className="bg-transparent border-2 w-full rounded-md mt-2 xx-sm:mt-0 py-2 2xl:py-2 text-sm  font-semibold md:text-lg lg:text-xl 2xl:text-2xl hover:opacity-50">
             Download CV
           </button>
         </motion.a>

@@ -6,7 +6,7 @@ import Parallax from "./Components/Skills/Parallax";
 
 function App() {
   return (
-    <div className=" bg-Bg-Gradient">
+    <div className="bg-Bg-Gradient">
       <section id="Homepage" className="h-screen snap-center">
         <Nav />
         <div className="h-[90%]">
