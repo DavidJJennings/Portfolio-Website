@@ -7,7 +7,7 @@ const Projects = () => {
       title: "Kick It",
       img: "Kick-It-img.png",
       repository: "https://github.com/DavidJJennings/Kick-It",
-      url: "#",
+      url: "https://kick-it-20f0e.web.app/",
       description:
         "A hip eCommerce store for footwear enthusiasts looking to add the most sought after trainers to their prized collections. Filter, sort and add your favourites to the basket so you can review your purchase at the checkout!",
       technologies: [

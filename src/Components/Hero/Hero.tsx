@@ -74,7 +74,7 @@ const Hero = () => {
         <motion.div className="flex gap-x-4" variants={textVariants}>
           <a target="_blank" href="https://github.com/DavidJJennings">
             <img
-              className="h-10 mt-4 x-sm:h-12 lg:h-14 xl:h-16"
+              className="h-10 mt-4 x-sm:h-12 lg:h-14 xl:h-16 hover:opacity-50"
               src="Github-Icon.svg"
               alt=""
             />
@@ -84,7 +84,7 @@ const Hero = () => {
             href="https://www.linkedin.com/in/david-jennings-1ba9311b6/"
           >
             <img
-              className="h-10 mt-4 x-sm:h-12 lg:h-14 xl:h-16"
+              className="h-10 mt-4 x-sm:h-12 lg:h-14 xl:h-16 hover:opacity-50"
               src="Linkedin-Icon.svg"
               alt=""
             />
