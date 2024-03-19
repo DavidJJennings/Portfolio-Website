@@ -1,3 +1,4 @@
+import Contact from "./Components/Contact/Contact";
 import Hero from "./Components/Hero/Hero";
 import Nav from "./Components/Nav/Nav";
 import Projects from "./Components/Projects/Projects";
@@ -25,7 +26,7 @@ function App() {
       </section>
       <Projects />
       <section id="Contact" className="h-screen snap-center">
-        Contact
+        <Contact />
       </section>
     </div>
   );
