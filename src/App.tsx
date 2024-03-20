@@ -21,9 +21,8 @@ function App() {
       <section className="h-screen snap-center">
         <About />
       </section>
-      <section id="Projects" className="h-screen snap-center">
-        <Parallax text={"Projects"} />
-      </section>
+      <Parallax text={"Projects"} />
+
       <Projects />
       <section id="Contact" className="h-screen snap-center">
         <Contact />

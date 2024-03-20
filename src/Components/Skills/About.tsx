@@ -18,13 +18,13 @@ const About = () => {
   return (
     <div
       ref={ref}
-      className="relative flex flex-col w-full h-full justify-center p-10 xx-sm:pt-20 px-12 xx-sm:px-10 x-sm:px-12 lg:px-12"
+      className="relative flex flex-col w-full h-full justify-center items-center p-10 xx-sm:pt-20 px-12 xx-sm:px-10 x-sm:px-12 lg:px-12"
     >
       <motion.div
         variants={textVariants}
         initial={"initial"}
         animate={isInView ? "animate" : "initial"}
-        className="relative flex flex-col w-full h-full items-center justify-start xx-sm:justify-between sm:gap-y-8"
+        className="relative flex flex-col w-full h-full items-center justify-start gap-y-4 sm:gap-y-8"
       >
         <motion.div
           className="flex flex-col items-center justify-center gap-y-2 x-sm:w-full xx-sm:items-start lg:px-12 "
