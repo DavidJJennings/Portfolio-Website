@@ -18,13 +18,13 @@ const About = () => {
   return (
     <div
       ref={ref}
-      className="relative flex flex-col w-full h-full justify-center items-center p-10 xx-sm:pt-20 px-12 xx-sm:px-10 x-sm:px-12 lg:px-12"
+      className="relative flex flex-col w-full h-full justify-center items-center p-6 px-6 xx-sm:p-12 xx-sm:px-10 x-sm:pt-20 x-sm:px-12 lg:px-12"
     >
       <motion.div
         variants={textVariants}
         initial={"initial"}
         animate={isInView ? "animate" : "initial"}
-        className="relative flex flex-col w-full h-full items-center justify-start gap-y-4 sm:gap-y-8"
+        className="relative flex flex-col w-full h-full items-center justify-center x-sm:justify-start  gap-y-4 sm:gap-y-8"
       >
         <motion.div
           className="flex flex-col items-center justify-center gap-y-2 x-sm:w-full xx-sm:items-start lg:px-12 "
@@ -33,7 +33,7 @@ const About = () => {
           <h2 className="font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl">
             About
           </h2>
-          <p className=" text-justify text-sm leading-loose x-sm:leading-8 sm:leading-7 lg:leading-8  xl:leading-9 lg:text-xl xl:text-2xl 2xl:text-3xl ">
+          <p className=" text-justify text-[0.85rem] xx-sm:text-sm leading-loose x-sm:leading-8 sm:leading-7 lg:leading-8  xl:leading-9 lg:text-xl xl:text-2xl 2xl:text-3xl ">
             As a junior front-end developer with over a years experience in
             React, I blend technical skills and creativity to engineer
             responsive, high-performance websites. I'm a huge health and fitness

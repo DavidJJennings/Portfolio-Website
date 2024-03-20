@@ -56,7 +56,7 @@ const Menu = () => {
         className=" bg-white fixed left-0 top-0 h-full w-full md:w-[400px] flex flex-col justify-center items-center"
       >
         <ToggleBtn {...props} />
-        {open && <Links />}
+        {open && <Links setOpen={setOpen} />}
       </motion.div>
     </div>
   );

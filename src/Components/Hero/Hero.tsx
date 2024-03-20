@@ -19,7 +19,7 @@ const Hero = () => {
       x: "-250%",
       transition: {
         repeat: Infinity,
-        repeatType: "loop" as const,
+        repeatType: "reverse" as const,
         duration: 30,
         ease: "linear",
       },
@@ -56,7 +56,7 @@ const Hero = () => {
             variants={textVariants}
             className=" font-extralight text-lg x-sm:text-xl md:text-2xl lg:text-3xl 2xl:text-4xl"
           >
-            Junior Font End Developer
+            Junior Front End Developer
           </motion.h4>
         </motion.div>
         <motion.div
@@ -69,7 +69,7 @@ const Hero = () => {
             </button>
           </motion.a>
 
-          <motion.a className="w-1/2 " href="#Projects">
+          <motion.a className="w-1/2 " href="#Contact">
             <button className="bg-transparent border-2 w-full rounded-md py-2 text-sm font-semibold md:text-lg lg:text-xl 2xl:text-2xl hover:opacity-50">
               Contact
             </button>
@@ -99,7 +99,7 @@ const Hero = () => {
         variants={sliderVariants}
         initial="initial"
         animate="animate"
-        className="absolute bottom-0 text-[40px] sm:text-[90px] md:text-[110px] lg:text-[140px] 2xl:text-[200px] text-[#64656e] opacity-15 z-0 w-full"
+        className="absolute bottom-0 text-[40px] sm:text-[90px] md:text-[110px] lg:text-[140px] 2xl:text-[200px] text-[#64656e] opacity-25 z-0 w-full"
       >
         React Developer Designer SEO UI/UX
       </motion.div>

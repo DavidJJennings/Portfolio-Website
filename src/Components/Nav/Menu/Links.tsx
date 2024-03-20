@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 
-const Links = () => {
+type Props = {
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const Links: React.FC<Props> = ({ setOpen }) => {
   const listItems = ["Homepage", "Skills/Technologies", "Projects", "Contact"];
 
   const containerVariants = {
@@ -27,6 +31,7 @@ const Links = () => {
       {listItems.map((item) => {
         return (
           <motion.li
+            onClick={() => setOpen(false)}
             variants={itemVariants}
             key={item}
             className="hover:underline"
