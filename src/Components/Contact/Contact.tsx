@@ -4,7 +4,8 @@ import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const ref = useRef(null);
-  const form = useRef(null);
+  const form = useRef<HTMLFormElement>(null);
+
   const [error, setError] = useState("");
   interface EmailError {
     text: string;
@@ -28,6 +29,7 @@ const Contact = () => {
       .then(
         () => {
           setError("Success");
+          form.current?.reset();
         },
         (error: EmailError) => {
           console.log("FAILED...", error.text);
