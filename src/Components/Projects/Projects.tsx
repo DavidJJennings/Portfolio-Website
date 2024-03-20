@@ -22,7 +22,7 @@ const Projects = () => {
       title: "Code Connect",
       img: "Code-Connect-img.png",
       repository: "https://github.com/DavidJJennings/Code-Connect",
-      url: "#",
+      url: "https://code-connect-603de.web.app/",
       description:
         "A social media platform for New Developers looking to connect, collaborate and share their projects in a environment of individuals with similar ability. Google Authentication is enabled, however, should you not wish to use your account, please use the details provided in the placeholders.",
       technologies: [
