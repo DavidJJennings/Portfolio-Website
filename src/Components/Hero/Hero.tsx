@@ -28,8 +28,16 @@ const Hero = () => {
 
   return (
     <div className="w-full py-10 x-sm:py-5 lg:pb-16 lg:pt-4 px-4 h-full flex flex-col items-center md:flex-row-reverse justify-center md:gap-x-8 xl:gap-x-12 relative overflow-x-hidden whitespace-nowrap">
-      <div className="h-1/2 md:h-full md:p-5 z-10">
-        <img className="h-full" src="Headshot.jpg" alt="Placeholder Headshot" />
+      <div className="h-1/2 md:h-2/3 md:p-5 z-10 md:relative md:bottom-10 md:w-1/3s">
+        <img
+          className="h-full"
+          style={{
+            borderBottomLeftRadius: "50%",
+            borderBottomRightRadius: "50%",
+          }}
+          src="Headshot.png"
+          alt="Placeholder Headshot"
+        />
       </div>
       <motion.div
         variants={textVariants}
