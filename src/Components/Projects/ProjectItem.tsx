@@ -6,7 +6,7 @@ type Props = {
     id: number;
     title: string;
     img: string;
-    repository: string;
+    repository?: string;
     url: string;
     description: string;
     technologies: {
@@ -71,15 +71,17 @@ const ProjectItem: React.FC<Props> = ({ project }) => {
               Live Demo
             </button>
           </a>
-          <a
-            className="w-1/2 sm:w-1/3"
-            target="_blank"
-            href={project.repository}
-          >
-            <button className="bg-transparent border-2 w-full rounded-md mt-2 py-2 2xl:py-2 text-sm  font-semibold md:text-[1.075rem] lg:text-xl xl:text-2xl 2xl:text-3xl hover:opacity-50">
-              Visit Repo
-            </button>
-          </a>
+          {project.repository && (
+            <a
+              className="w-1/2 sm:w-1/3"
+              target="_blank"
+              href={project.repository}
+            >
+              <button className="bg-transparent border-2 w-full rounded-md mt-2 py-2 2xl:py-2 text-sm  font-semibold md:text-[1.075rem] lg:text-xl xl:text-2xl 2xl:text-3xl hover:opacity-50">
+                Visit Repo
+              </button>
+            </a>
+          )}
         </div>
       </motion.div>
     </motion.section>

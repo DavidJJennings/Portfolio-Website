@@ -33,6 +33,15 @@ const Projects = () => {
         { name: "Firebase", image: "/Firebase-Icon.svg" },
       ],
     },
+    {
+      id: 3,
+      title: "The Reading Corner",
+      img: "The-Reading-Corner.png",
+      url: "https://www.thereadingcorner.uk/",
+      description:
+        "A non-profit organisation aiming to support the development of Children's literacy and provide spotlight for authors from minority backgrounds.",
+      technologies: [{ name: "Wix", image: "/Wix-Icon.svg" }],
+    },
   ];
   return (
     <div>
