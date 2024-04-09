@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
+import usePageScroll from "../../../hooks/usePageScroll";
 
 type Props = {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const Links: React.FC<Props> = ({ setOpen }) => {
+  const scroll = usePageScroll();
   const listItems = ["Homepage", "Skills/Technologies", "Projects", "Contact"];
 
   const containerVariants = {
@@ -31,7 +32,7 @@ const Links: React.FC<Props> = ({ setOpen }) => {
     >
       {listItems.map((item) => {
         return (
-          <Link key={item} to={`${item}`} smooth={true} duration={100}>
+          <button key={item} onClick={() => scroll(item)}>
             <motion.li
               onClick={() => setOpen(false)}
               variants={itemVariants}
@@ -39,7 +40,7 @@ const Links: React.FC<Props> = ({ setOpen }) => {
             >
               {item}
             </motion.li>
-          </Link>
+          </button>
         );
       })}
     </motion.ul>

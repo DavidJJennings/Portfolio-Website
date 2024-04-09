@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
+import usePageScroll from "../../hooks/usePageScroll";
 
 const Hero = () => {
+  const Scroll = usePageScroll();
   const textVariants = {
     initial: { opacity: 0 },
 
@@ -32,10 +33,6 @@ const Hero = () => {
       id="Homepage"
       className=" snap-center box-border w-screen py-10 x-sm:py-5 lg:pb-16 lg:pt-4 px-4 h-screen flex flex-col items-center md:flex-row-reverse justify-center md:gap-x-8 xl:gap-x-12 relative overflow-x-hidden whitespace-nowrap"
     >
-      <a href="#Projects">
-        <button>Click</button>
-      </a>
-
       <div className="h-1/2 md:h-2/3 md:p-5 z-10 md:relative md:bottom-10 md:w-1/3">
         <img
           className="h-full"
@@ -71,17 +68,19 @@ const Hero = () => {
           variants={textVariants}
           className="flex pt-3 x-sm:pt-6 gap-x-4 w-full justify-center"
         >
-          <Link to="Projects" smooth={true} duration={100} className="w-1/2">
-            <motion.button className="bg-transparent border-2 rounded-md w-full py-2 text-sm font-semibold md:text-lg lg:text-xl 2xl:text-2xl hover:opacity-50">
-              My Projects
-            </motion.button>
-          </Link>
+          <motion.button
+            onClick={() => Scroll("Projects")}
+            className=" w-1/2 bg-transparent border-2 rounded-md py-2 text-sm font-semibold md:text-lg lg:text-xl 2xl:text-2xl hover:opacity-50"
+          >
+            My Projects
+          </motion.button>
 
-          <Link to="Contact" smooth={true} duration={100} className="w-1/2">
-            <motion.button className="bg-transparent border-2 w-full rounded-md py-2 text-sm font-semibold md:text-lg lg:text-xl 2xl:text-2xl hover:opacity-50">
-              Contact
-            </motion.button>
-          </Link>
+          <motion.button
+            onClick={() => Scroll("Contact")}
+            className=" w-1/2 bg-transparent border-2 rounded-md py-2 text-sm font-semibold md:text-lg lg:text-xl 2xl:text-2xl hover:opacity-50"
+          >
+            Contact
+          </motion.button>
         </motion.div>
         <motion.div className="flex gap-x-4" variants={textVariants}>
           <a target="_blank" href="https://github.com/DavidJJennings">
