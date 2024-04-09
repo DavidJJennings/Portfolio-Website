@@ -31,7 +31,7 @@ const ProjectItem: React.FC<Props> = ({ project }) => {
     <motion.section
       ref={ref}
       key={project.id}
-      className="overflow-hidden h-screen snap-center pt-14 pb-8 px-12 flex flex-col justify-start items-center gap-y-4 lg:flex-row-reverse xl:px-20"
+      className="overflow-hidden h-screen w-screen snap-start pt-14 pb-8 px-12 flex flex-col justify-start items-center gap-y-4 lg:flex-row-reverse xl:px-20"
     >
       <div className=" flex w-4/5 flex-col max-w-[300px] lg:w-1/2 lg:p-16 lg:max-w-none z-10">
         <a href={project.url} target="_blank">
