@@ -16,7 +16,11 @@ const Parallax: React.FC<Props> = ({ text }) => {
   const moonPosition = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
   const starsPosition = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
   return (
-    <div ref={ref} className=" w-full h-full relative overflow-hidden">
+    <div
+      id={text === "Skills" ? "Skills/Technologies" : "Projects"}
+      ref={ref}
+      className="w-screen h-screen relative overflow-hidden snap-start"
+    >
       <motion.div
         style={{ y: textPosition }}
         className="h-1/3 flex items-center justify-center text-center text-3xl font-bold lg:text-4xl xl:text-5xl"

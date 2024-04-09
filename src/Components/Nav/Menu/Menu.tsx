@@ -48,7 +48,7 @@ const Menu = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center text-black z-50">
+    <div className="flex flex-col justify-center items-center text-black z-50 relative">
       <motion.div
         animate={open ? "open" : "closed"}
         variants={variants}

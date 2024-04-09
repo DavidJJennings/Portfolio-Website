@@ -7,34 +7,26 @@ import Parallax from "./Components/Skills/Parallax";
 
 function App() {
   return (
-    <div className="bg-Bg-Gradient snap-y snap-mandatory w-screen">
-      <section id="Homepage" className="h-screen w-screen snap-start">
+    <div className="bg-Bg-Gradient snap-y snap-mandatory w-screen relative">
+      <div id="Homepage" className="h-screen w-screen snap-start">
         <Nav />
         <div className="h-[90%]">
           <Hero />
         </div>
-      </section>
+      </div>
 
-      <section
-        id="Skills/Technologies"
-        className="h-screen w-screen snap-start"
-      >
-        <Parallax text={"Skills"} />
-      </section>
-      <section className="h-screen w-screen snap-start">
+      <Parallax text={"Skills"} />
+      <div className="h-screen w-screen snap-start">
         <About />
-      </section>
+      </div>
 
-      <section id="Projects" className="h-screen w-screen snap-start">
-        <Parallax text={"Projects"} />
-      </section>
+      <Parallax text={"Projects"} />
 
-      <section>
-        <Projects />
-      </section>
-      <section id="Contact" className="h-screen w-screen snap-start">
+      <Projects />
+
+      <div id="Contact" className="h-screen w-screen snap-start relative">
         <Contact />
-      </section>
+      </div>
     </div>
   );
 }

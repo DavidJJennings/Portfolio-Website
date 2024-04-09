@@ -44,7 +44,7 @@ const Projects = () => {
     },
   ];
   return (
-    <div>
+    <div className="relative">
       {projects.map((project) => {
         return <ProjectItem key={project.id} project={project} />;
       })}
