@@ -54,11 +54,12 @@ const Contact = () => {
 
   return (
     <motion.div
+      id="Contact"
       ref={ref}
       variants={variants}
       initial="initial"
       animate={isInView ? "animate" : "initial"}
-      className="flex flex-col h-full w-full p-12 py-16 justify-start items-center xl:text-xl"
+      className=" box-border flex flex-col h-screen w-screen snap-center p-12 py-16 justify-start items-center xl:text-xl"
     >
       <motion.h3
         variants={variants}

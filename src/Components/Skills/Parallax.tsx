@@ -19,7 +19,7 @@ const Parallax: React.FC<Props> = ({ text }) => {
     <div
       id={text === "Skills" ? "Skills/Technologies" : "Projects"}
       ref={ref}
-      className="w-screen h-screen relative overflow-hidden snap-start"
+      className="w-screen h-screen relative overflow-hidden snap-center"
     >
       <motion.div
         style={{ y: textPosition }}

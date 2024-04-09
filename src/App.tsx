@@ -7,26 +7,20 @@ import Parallax from "./Components/Skills/Parallax";
 
 function App() {
   return (
-    <div className="bg-Bg-Gradient snap-y snap-mandatory w-screen relative">
-      <div id="Homepage" className="h-screen w-screen snap-start">
-        <Nav />
-        <div className="h-[90%]">
-          <Hero />
-        </div>
-      </div>
+    <div className=" bg-Bg-Gradient snap-y snap-mandatory w-screen relative">
+      <Nav />
+
+      <Hero />
 
       <Parallax text={"Skills"} />
-      <div className="h-screen w-screen snap-start">
-        <About />
-      </div>
+
+      <About />
 
       <Parallax text={"Projects"} />
 
       <Projects />
 
-      <div id="Contact" className="h-screen w-screen snap-start relative">
-        <Contact />
-      </div>
+      <Contact />
     </div>
   );
 }

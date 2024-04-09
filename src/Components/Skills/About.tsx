@@ -18,7 +18,7 @@ const About = () => {
   return (
     <div
       ref={ref}
-      className="relative flex flex-col w-full h-full justify-center items-center p-6 px-6 xx-sm:p-12 xx-sm:px-10 x-sm:pt-20 x-sm:px-12 lg:px-12"
+      className="snap-center relative flex flex-col w-screen box-border h-screen justify-center items-center p-6 px-6 xx-sm:p-12 xx-sm:px-10 x-sm:pt-20 x-sm:px-12 lg:px-12"
     >
       <motion.div
         variants={textVariants}
