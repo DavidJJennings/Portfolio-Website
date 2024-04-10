@@ -1,5 +1,6 @@
 const usePageScroll = () => {
-  return (page: string) => {
+  return (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, page: string) => {
+    e.preventDefault();
     const targetPage = document.querySelector(`#${page}`);
     if (targetPage) {
       targetPage.scrollIntoView({ behavior: "smooth" });

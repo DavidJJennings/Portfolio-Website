@@ -25,14 +25,14 @@ const Menu = () => {
   const getVariants = () => {
     return {
       open: {
-        clipPath: `circle(2000px at 50px 50px)`,
+        clipPath: `circle(2000px at 12.5% 7.5%)`,
         transition: {
           type: "spring",
           stiffness: 20,
         },
       },
       closed: {
-        clipPath: `circle(${circleRadius} at 40px 50px)`, // Ensuring correct syntax here
+        clipPath: `circle(${circleRadius} at 12.5% 7.5%)`, // Ensuring correct syntax here
         transition: {
           type: "spring",
           stiffness: 400,

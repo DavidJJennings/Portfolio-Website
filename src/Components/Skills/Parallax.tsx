@@ -17,20 +17,20 @@ const Parallax: React.FC<Props> = ({ text }) => {
   const starsPosition = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
   return (
     <div
-      id={text === "Skills" ? "Skills/Technologies" : "Projects"}
+      id={text == "Projects" ? "Projects" : "Skills"}
       ref={ref}
-      className="w-screen h-screen relative overflow-hidden snap-center"
+      className="w-screen h-screen relative overflow-hidden lg:snap-center"
     >
       <motion.div
         style={{ y: textPosition }}
-        className="h-1/3 flex items-center justify-center text-center text-3xl font-bold lg:text-4xl xl:text-5xl"
+        className="h-1/3 flex items-center justify-center text-center text-3xl font-bold lg:text-4xl xl:text-5xl 2xl:text-7xl"
       >
-        {text === "Skills" ? (
+        {text === "Projects" ? (
+          <h2>My Projects</h2>
+        ) : (
           <h2>
             Skills &amp; <br /> Technology
           </h2>
-        ) : (
-          <h2>My Projects</h2>
         )}
       </motion.div>
 

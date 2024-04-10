@@ -4,9 +4,11 @@
 
 @layer base {
   html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    position: relative;
+    @media (min-width: 1024px) {
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+      position: relative;
+    }
   }
   body {
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,

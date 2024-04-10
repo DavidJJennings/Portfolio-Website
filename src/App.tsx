@@ -12,7 +12,7 @@ function App() {
 
       <Hero />
 
-      <Parallax text={"Skills"} />
+      <Parallax text={"Skills/Technologies"} />
 
       <About />
 

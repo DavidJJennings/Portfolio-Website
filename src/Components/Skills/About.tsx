@@ -18,13 +18,13 @@ const About = () => {
   return (
     <div
       ref={ref}
-      className="snap-center relative flex flex-col w-screen box-border h-screen justify-center items-center p-6 px-6 xx-sm:p-12 xx-sm:px-10 x-sm:pt-20 x-sm:px-12 lg:px-12"
+      className="lg:snap-center relative flex flex-col w-screen box-border h-screen justify-center items-center p-6 px-6 xx-sm:p-12 xx-sm:px-10 x-sm:pt-20 x-sm:px-12 lg:px-12 2xl:px-[5%]"
     >
       <motion.div
         variants={textVariants}
         initial={"initial"}
         animate={isInView ? "animate" : "initial"}
-        className="relative flex flex-col w-full h-full items-center justify-center x-sm:justify-start  gap-y-4 sm:gap-y-8"
+        className="relative flex flex-col w-full h-full items-center justify-center x-sm:justify-start  gap-y-4 sm:gap-y-8 2xl:justify-around"
       >
         <motion.div
           className="flex flex-col items-center justify-center gap-y-2 x-sm:w-full xx-sm:items-start lg:px-12 "
@@ -55,22 +55,22 @@ const About = () => {
           <div className="flex w-full justify-around md:justify-center gap-x-20">
             <ul className=" list-disc list-inside lg:text-xl xl:text-2xl">
               <li>HTML/CSS</li>
-              <li>Typescript</li>
+              <li>Javascript & TS</li>
               <li>React</li>
-              <li>Tailwind</li>
+              <li>SASS</li>
             </ul>
             <ul className=" list-disc list-inside lg:text-xl xl:text-2xl">
-              <li>Styled Components</li>
-              <li>LESS/SASS</li>
-              <li>Git/Github</li>
-              <li>Figma/Canva</li>
+              <li>API Handling</li>
+              <li>Version Control</li>
+              <li>Node</li>
+              <li>MongoDB</li>
             </ul>
           </div>
         </motion.div>
         <motion.a
           variants={textVariants}
           className="w-1/2 sm:w-1/3 lg:w-1/4"
-          href="David Jennings CV.pdf"
+          href="David Jennings CV PDF.pdf"
           download={"David Jennings CV"}
         >
           <button className="bg-transparent border-2 w-full rounded-md mt-2 xx-sm:mt-0 py-2 2xl:py-2 text-sm  font-semibold md:text-lg lg:text-xl 2xl:text-2xl hover:opacity-50">

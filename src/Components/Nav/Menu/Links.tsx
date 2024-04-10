@@ -7,7 +7,7 @@ type Props = {
 
 const Links: React.FC<Props> = ({ setOpen }) => {
   const scroll = usePageScroll();
-  const listItems = ["Homepage", "Skills/Technologies", "Projects", "Contact"];
+  const listItems = ["Homepage", "Skills", "Projects", "Contact"];
 
   const containerVariants = {
     hidden: {},
@@ -32,13 +32,13 @@ const Links: React.FC<Props> = ({ setOpen }) => {
     >
       {listItems.map((item) => {
         return (
-          <button key={item} onClick={() => scroll(item)}>
+          <button key={item} onClick={(e) => scroll(e, item)}>
             <motion.li
               onClick={() => setOpen(false)}
               variants={itemVariants}
               className="hover:underline"
             >
-              {item}
+              {item == "Skills" ? "Skills/Technologies" : item}
             </motion.li>
           </button>
         );
